@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book
+{
+private:
+    string title;
+    string author;
+    int price;
+
+public:
+    void setDetails(string t, string a, int p)
+    {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void displayDetails()
+    {
+        cout << "Book Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: Rs. " << price << endl;
+    }
+};
+
+int main()
+{
+    Book b1;
+
+    b1.setDetails("The Alchemist", "Paulo Coelho", 350);
+
+    cout << "Book Details" << endl;
+    b1.displayDetails();
+
+    return 0;
+}
