@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int rollNo;
+    string branch;
+
+public:
+    void setDetails(string name, int rollNo, string branch) {
+        this->name = name;
+        this->rollNo = rollNo;
+        this->branch = branch;
+    }
+
+    void display() {
+        cout << "\n--- Student Details ---" << endl;
+        cout << "Name: " << this->name << endl;
+        cout << "Roll No: " << this->rollNo << endl;
+        cout << "Branch: " << this->branch << endl;
+    }
+};
+
+int main() {
+    Student s;
+
+    s.("Simran",49, "AI & DS");
+    s.display();
+
+    return 0;
+}
